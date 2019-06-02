@@ -1,47 +1,46 @@
 body {
   font-family:Arial, sans-serif;
-  }
-  
-  #topnav {
+}
+#topnav {
   background-color:#e4e4e4;
   border-bottom-style:solid;
   border-color:#000;
   border-width:1px;
   color:#000;
   display:flex;
-  height:55px;
+  height:50px;
   position:fixed;
-  left:15%;
+  margin-left: 300px;
+  left: 0;
   top:0;
-  width:85%;
+  width:100%;
   z-index:1;
-  }
-  
-  #sidenav {
+}
+#sidenav {
   background-color:#e4e4e4;
   border-right:solid 1px;
   display:flex;
   flex-direction:column;
+  align-content: center;
+  justify-items: center;
   height:100%;
   left:0;
   width: 300px;
   position:fixed;
   top:0;
   z-index:1;
-  }
-  
-  #sidenav header {
+}
+#sidenav header {
   border-bottom-style:solid;
   border-color:#000;
   border-width:1px;
   color:#0084ff;
-  font-size:35px;
+  font-size: 20px;
   height:30px;
-  padding: 5px 20px 20px;
+  padding: 10px 20px 10px;
   text-align:center;
-  }
-  
-  .nav-link {
+}
+.nav-link {
   border-color:#FFF;
   border-top-style:solid;
   border-width:1px;
@@ -49,11 +48,14 @@ body {
   font-size: 25px;
   padding:20px;
   text-decoration:none;
-  width: 100%;
+  max-width: 100%;
   transition-duration:0.3s;
-  }
-  
-  .nav-link-top {
+}
+.nav-link:hover {
+  background-color: #ffffff;
+  box-shadow:0 0 5px;
+}
+.nav-link-top {
   border-right-style:solid;
   border-width:1px;
   color:#000;
@@ -63,39 +65,41 @@ body {
   padding:10px 20px 20px;
   text-align:center;
   text-decoration:none;
-  transition-duration:.3s;
-  }
-  
-  .nav-link:hover {
-    background-color: #ffffff;
-    width: 90%;
-    box-shadow:0 0 5px;
-  }
-  
-  .nav-link-top:hover {
+  transition-duration:0.3s;
+}
+.nav-link-top:hover {
   box-shadow:0 0 5px;
   background-color: #ffffff;
-  }
-  
-  #content {
+}
+#active-link {
+  border-bottom-style: solid;
+  border-bottom-color: rgb(44, 128, 255);
+  border-bottom-width: 3px;
+}
+#content {
   margin-left:310px;
-  margin-top:120px;
+  margin-top:80px;
   padding:0 50px;
-  }
-  
-  .main-section {
+}
+.main-section {
   margin-bottom:50px;
-  }
-  
-  .main-section header {
+}
+.main-section header {
   border-bottom-style:solid;
   border-width:1px;
   font-size:30px;
   margin-top:20px;
   padding-bottom:10px;
-  }
-  
-  code {
+}
+.sub-section {
+  margin-left: 70px;
+}
+
+.sub-section header {
+  margin-top: 50px;
+  font-size: 25px;
+}
+code {
   background-color:#313131;
   border-radius:5px;
   color:#FFF;
@@ -104,8 +108,13 @@ body {
   margin:10px;
   padding:10px;
   text-align:left;
-  }
-  
-  li {
+}
+
+.tag {
+  background-color: rgb(235, 235, 235);
+  color: red;
+}
+
+li {
   margin-top:10px;
-  }
+}

@@ -1,40 +1,186 @@
 <!DOCTYPE html>
-<head>
-  <link href="styles.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <nav id="topnav">
-    <a href="#" class="nav-link-top">HTML</a>
-    <a href="#" class="nav-link-top">CSS</a>
-    <a href="#" class="nav-link-top">JavaScript</a>
-  </nav>
-  <nav id="sidenav">
-    <header>HTML & CSS</header>
-    <a href="#" class="nav-link">Sample Link</a>
-    <a href="#" class="nav-link">Sample Link</a>
-    <a href="#" class="nav-link">Sample Link</a>
-    <a href="#" class="nav-link">Sample Link</a>
-    <a href="#" class="nav-link">Sample Link</a>
-    <a href="#" class="nav-link">Sample Link</a>
-    <a href="#" class="nav-link">Sample Link</a>
-    <a href="#" class="nav-link">Sample Link</a>
-    <a href="#" class="nav-link">Sample Link</a>
-    <a href="#" class="nav-link">Sample Link</a>
-  </nav>
-  <main id="content">
-    <section class="main-section">
-      <header>Sample Doc Header</header>
-      <p>Sample doc text.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat ex eu volutpat congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sem risus, pellentesque non erat non, imperdiet hendrerit ligula. Vestibulum tellus mi, condimentum eu ligula vitae, tempus tempus erat. Phasellus sollicitudin sapien at lorem elementum semper. In condimentum tincidunt ex. Donec non magna at urna venenatis cursus. Nam cursus dui eu vehicula rhoncus.</p>
-      <p>Praesent lacinia feugiat urna, rhoncus viverra eros sollicitudin nec. In hendrerit ultrices facilisis. Donec dapibus, lorem sed tempor semper, diam mauris consectetur ipsum, vitae pretium dui eros vel turpis. Ut vitae massa tempor, interdum arcu ac, venenatis massa. Ut suscipit, risus id iaculis consequat, mauris sapien elementum lacus, et efficitur lacus risus euismod turpis. Cras velit nulla, volutpat vitae aliquet eget, molestie non velit. Mauris massa erat, dapibus eget lobortis a, rhoncus eu nunc. Curabitur ac facilisis quam.</p>
-      <p>Praesent interdum aliquam feugiat. Ut pellentesque tempor massa, quis mattis ipsum volutpat sed. Phasellus quis vehicula erat, vel tempus felis. Nunc vel imperdiet justo. Morbi eu elementum neque, non dignissim leo. Nunc rutrum tortor sit amet commodo elementum. Etiam sit amet sem et sapien hendrerit lobortis nec vitae lectus. Nunc nec tortor sapien. Sed volutpat tortor sit amet arcu placerat fringilla. Maecenas non purus scelerisque purus porta efficitur.</p>
-      <p>
-        Sample code below:
-        <code>
-          Sample Code.
-        </code>
-        Sample code above
-      </p>
-    </section>
-  </main>  
-</body>
+<html>
+  <head>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>HTML Documentation</title>
+  </head>
+  <body>
+    <nav id="topnav">
+      <a href="index.html" class="nav-link-top" id="active-link">HTML</a>
+      <a href="css-doc.html" class="nav-link-top">CSS</a>
+      <a href="js-doc.html" class="nav-link-top">JavaScript</a>
+    </nav>
+    <nav id="sidenav">
+      <header>HTML Documentation</header>
+      <a href="#introduction" class="nav-link">Introduction</a>
+      <a href="#html_elements" class="nav-link">Elements</a>
+      <a href="#html_attributes" class="nav-link">Attributes</a>
+      <a href="#html_headings" class="nav-link">Headings</a>
+      <a href="#html_paragraphs" class="nav-link">Paragraphs</a>
+    </nav>
+    <main id="content">
+      <section id="introduction" class="main-section">
+        <header>What is HTML?</header>
+        <p>HTML is the standard language used to create web pages.</p>
+        <ul>
+          <li>HTML stands for Hyper Text Markup Language</li>
+          <ul>
+            <li>It stands for "Hyper Text Markup Language"</li>
+            <li>Is used to describe the structure of a web page</li>
+            <li>"Elements" are the building blocks of a web page.</li>
+            <li>Elements are represented by "tags"</li>
+            <li>Tags are used to label pieces of content to give them semantic meaning</li>
+          </ul>
+        </ul>
+        <section class="sub-section">
+          <header>Sample HTML Document</header>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+        <section class="sub-section">
+          <header>Sample Explained</header>
+          <ul>
+            <li>The <span class="tag">&lt;!DOCTYPE html&gt;</span> declaration defines this document to be HTML5</li>
+            <li>The <span class="tag">&lt;html&gt;</span>element is the root element of an HTML page</li>
+            <li>The <span class="tag">&lt;head&gt;</span> element contains meta information about the document</li>
+            <li>The <span class="tag">&lt;title&gt;</span> element specifies a title for the document</li>
+            <li>The <span class="tag">&lt;body&gt;</span> element contains the visible page content</li>
+            <li>The <span class="tag">&lt;h1&gt;</span> element defines a large heading</li>
+            <li>The <span class="tag">&lt;p&gt;</span> element defines a paragraph</li>
+          </ul>
+        </section>
+      </section>
+      <section id="html_elements" class="main-section">
+        <header>HTML Elements</header>
+        <p>An HTML element usually consists of a start tag and end tag, with the content inserted in between:</p>
+        <p><span class="tag">&lt;tagname&gt;</span>Content goes in here!<span class="tag">&lt;/tagname&gt;</span></p>
+        <section class="sub-section">
+          <header>Nested Elements</header>
+          <p>HTML elements can be nested (elements can contain elements).</p>
+          <p>All HTML documents consist of nested HTML elements.</p>
+          <p>This example contains four HTML elements:</p>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;         
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;        
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+        <section class="sub-section">
+          <header>Sample Explained</header>
+          <p>The <html> element defines the whole document.</p>
+          <p>It has a start tag <html> and an end tag </html>.</p>
+          <p>The element content is another HTML element (the <body> element).</p>
+          <pre><code>&lt;html&gt; 
+  &lt;body&gt;          
+    &lt;h1&gt; My First Heading&lt;/h1&gt; 
+    &lt;p>My first paragraph.&lt;/p&gt;     
+  &lt;/body&gt; 
+&lt;/html&gt; </code></pre>
+          <p>The <body> element defines the document body.</p>
+          <p>It has a start tag <body> and an end tag </body>.</p>
+          <p>The element content is two other HTML elements (&lt;h1&gt; and &lt;p&gt;).</p>
+          <pre><code>&lt;body&gt; 
+  &lt;h1&gt; My First Heading&lt;/h1&gt; 
+  &lt;p&gt; My first paragraph.&lt;/p&gt; 
+&lt;/body&gt;</code></pre>
+          <p>The &lt;h1&gt; element defines a heading.</p>
+          <p>It has a start tag &lt;h1&gt;  and an end tag &lt;/h1&gt;.</p>
+          <p>The element content is: My First Heading.</p>
+          <pre><code>&lt;h1>My First Heading&lt;/h1&gt; </code></pre>
+          <p>The &lt;p> element defines a paragraph.</p>
+          <p>It has a start tag &lt;p&gt; and an end tag &lt;/p&gt;.</p>
+          <p>The element content is: My first paragraph.</p>
+          <pre><code>&lt;p&gt; My first paragraph.&lt;/p&gt; </code></pre>
+        </section>
+      </section>
+      <section id="html_attributes" class="main-section">
+        <header>HTML Attributes</header>
+        <p>Attributes provide additional information about HTML elements.</p>
+        <ul>
+          <li>All HTML elements can have attributes</li>
+          <li>Attributes provide additional information about an element</li>
+          <li>Attributes are always specified in the start tag</li>
+          <li>Attributes usually come in name/value pairs like: name="value"</li>
+        </ul>
+        <section class="sub-section">
+          <header>href</header>
+          <p>HTML links are defined with the <a> tag. The link address is specified in the href attribute:</p>
+            <code>&lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;</code>
+        </section>
+        <section class="sub-section">
+          <header>src</header>
+          <p>HTML images are defined with the &lt;img&gt; tag.</p>
+          <p>The filename of the image source is specified in the src attribute:</p>
+          <code>&lt;img src="img_girl.jpg"&gt;</code>
+        </section>
+        <section class="sub-section">
+          <header>width and height</header>
+          <p>Images in HTML have a set of size attributes, which specifies the width and height of the image:</p>
+          <code>&lt;img src="img_girl.jpg" width="500" height="600"&gt;</code>
+          <p>The image size is specified in pixels: width="500" means 500 pixels wide.</p>
+        </section>
+        <section class="sub-section">
+          <header>alt</header>
+          <p>The alt attribute specifies an alternative text to be used, when an image cannot be displayed.</p>
+          <p>The value of the attribute can be read by screen readers. This way, someone "listening" to the webpage, e.g. a vision impaired person, can "hear" the element.</p>
+          <code>&lt;img src="img_girl.jpg" alt="Girl with a jacket"&gt;</code>
+        </section>
+        <section class="sub-section">
+          <header>style</header>
+          <p>The style attribute is used to specify the styling of an element, like color, font, size etc.</p>
+          <code>&lt;p style="color:red"&gt;I am a paragraph&lt;/p&gt;</code>
+        </section>
+        <section class="sub-section">
+          <header>lang</header>
+          <p>The language of the document can be declared in the <html> tag.</p>
+          <p>The language is declared with the lang attribute.</p>
+          <p>Declaring a language is important for accessibility applications (screen readers) and search engines:</p>
+          <code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="en-US"&gt;<br>&lt;body&gt;<br><br>...<br><br>&lt;/body&gt;<br>&lt;/html&gt;</code>
+        </section>
+        <section class="sub-section">
+          <header>title</header>
+          <p>Here, a title attribute is added to the &lt;p&gt; element. The value of the title attribute will be displayed as a tooltip when you mouse over the paragraph:</p>
+          <code>&lt;p title="I'm a tooltip"&gt;This is a paragraph.&lt;/p&gt;</code>
+        </section>
+      </section>
+      <section id="html_headings" class="main-section">
+        <header>HTML Headings</header>
+        <p>Headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags.</p>
+        <p>&lt;h1&gt; defines the most important heading. &lt;h6&gt; defines the least important heading.</p>
+        <code>&lt;h1>Heading 1&lt;/h1&gt;<br>&lt;h2&gt;Heading 2&lt;/h2&gt;<br>&lt;h3&gt;Heading 3&lt;/h3&gt;<br>&lt;h4&gt;Heading 4&lt;/h4&gt;<br>&lt;h5&gt;Heading 5&lt;/h5&gt;<br>&lt;h6&gt;Heading 6&lt;/h6&gt;</code>
+        <section class="sub-section">
+          <header>Importance of Headings</header>
+          <p>Search engines use the headings to index the structure and content of your web pages.</p>
+          <p>Users skim your pages by its headings. It is important to use headings to show the document structure.</p>
+          <p>&lt;h1&gt; headings should be used for main headings, followed by &lt;h2&gt; headings, then the less important &lt;h3&gt;, and so on.</p>
+        </section>
+        <section class="sub-section">
+          <header>Bigger Headings</header>
+          <p>Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS font-size property:</p>
+          <code>&lt;h1 style="font-size:60px;"&gt;Heading 1&lt;/h1&gt;</code>
+        </section>
+        <section class="sub-section">
+          <header>Horizontal Rules</header>
+          <p>The &lt;hr&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
+          <p>The &lt;hr&gt; element is used to separate content (or define a change) in an HTML page:</p>
+          <code>&lt;h1&gt;This is heading 1&lt;/h1&gt;<br>&lt;p&gt;This is some text.&lt;/p&gt;<br>&lt;hr&gt;<br>&lt;h2&gt;This is heading 2&lt;/h2&gt;<br>&lt;p&gt;This is some other text.&lt;/p&gt;<br>&lt;hr&gt;</code>
+        </section>
+      </section>
+      <section id="html_paragraphs" class="main-section">
+        <header>Paragraphs</header>
+        <p>The HTML &lt;p&gt; element defines a paragraph:</p>
+        <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>&lt;p&gt;This is another paragraph.&lt;/p&gt;</code>
+      </section>
+    </main>  
+  </body>
+</html>
