@@ -2,12 +2,15 @@
 <html>
   <head>
     <title>CSS Documentation</title>
-    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="styles/prism.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="js.js"></script>
+    <script src="js/js.js"></script>
     <meta name="viewport">
   </head>
   <body>
+    <script src="js/prism.js"></script>
+
     <nav id="topnav">
       <a href="index.html" class="nav-link-top">HTML</a>
       <a href="css-doc.html" class="nav-link-top" id="active-link">CSS</a>
@@ -26,7 +29,7 @@
       <a href="#css-outline" class="nav-link">Outline</a>
       <a href="#css-text" class="nav-link">Text</a>
       <a href="#css-fonts" class="nav-link">Fonts</a>
-      <div id="sidenav-footer">Note that this site is just a sample and is not meant to be complete. Information here is referenced from <a href="https://www.w3schools.com">w3schools</a></div>
+      <footer>Note that this site is just a sample and is not meant to be complete. Information here is referenced from <a href="https://www.w3schools.com">w3schools</a></footer>
     </nav>
     <main id="content">
       <section id="css-intro" class="main-section">
@@ -44,13 +47,9 @@
           <p>The declaration block contains one or more declarations separated by semicolons.</p>
           <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
           <p>A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces.</p>
-          <p>In the following example all &lt;<span class="element">p</span>&gt; elements will be center-aligned, with a red text color:</p>
-          <code>
-            <span class="selector">p</span> {<br>
-            <span class="property">color</span>: <span class="value">red</span>;<br>
-            <span class="property">text-align</span>: <span class="value">center</span>;<br>
-            }
-        </code>
+          <p>In the following example all <code class="language-html">&lt;p&gt;</code> elements will be center-aligned, with a red text color:</p>
+          
+          <div data-include="css/css-syntax"></div>
         </section>
       </section>
       <section id="css-selectors"class="main-section">
@@ -59,96 +58,67 @@
         <section class="sub-section">
           <header>element Selector</header>
           <p>The element selector selects elements based on the element name.</p>
-          <p>You can select all <p> elements on a page like this (in this case, all <p> elements will be center-aligned, with a red text color):</p>
-          <code>
-            <span class="selector">p</span> {<br>
-            <span class="property">text-align</span>: <span class="value">center</span>;<br>
-            <span class="property">color</span>: <span class="value">red</span>;<br>
-            }</code>
+          <p>You can select all <code class="language-html">&lt;p&gt;</code> elements on a page like this (in this case, all <code class="language-html">&lt;p&gt;</code> elements will be center-aligned, with a red text color):</p>
+          
+          <!--Include-->          
+          <div data-include="css/element-selector"></div>
         </section>
         <section class="sub-section">
           <header>id Selector</header>
           <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
           <p>The id of an element should be unique within a page, so the id selector is used to select one unique element!</p>
           <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
-          <p>The style rule below will be applied to the HTML element with id="para1":</p>
-          <code>
-            <span class="selector">#para1</span> {<br>
-            <span class="property">text-align</span>: <span class="value">center</span>;<br>
-            <span class="property">color</span>: <span class="value">red</span>;<br>
-            }
-          </code>
+          <p>The style rule below will be applied to the HTML element with <code class="language-html">id = "para1"</code>:</p>
+          
+          <!--Include-->    
+          <div data-include="css/id-selector"></div>
         </section>
         <section class="sub-section">
           <header>class Selector</header>
           <p>The class selector selects elements with a specific class attribute.</p>
           <p>To select elements with a specific class, write a period (.) character, followed by the name of the class.</p>
-          <p>In the example below, all HTML elements with class="center" will be red and center-aligned:</p>
-          <code>
-            <span class="selector">.center</span> {<br>
-            <span class="property">text-align</span>: <span class="value">center;</span><br>
-            <span class="proeprty">color</span>: <span class="value">red;</span><br>
-            }
-          </code>
+          <p>In the example below, all HTML elements with <code class="language-html">class = "center"</code> will be red and center-aligned:</p>
+          
+          <!--Include-->    
+          <div data-include="css/class-selector"></div>
+
           <p>You can also specify that only specific HTML elements should be affected by a class.</p>
-          <p>In the example below, only <p> elements with class="center" will be center-aligned:</p>
-          <code>
-            <span class="selector">p.center</span> { <br>
-            <span class="property">text-align</span>: <span class="value">center;</span> <br>
-            <span class="property">color</span>: <span class="value">red;</span> <br>
-            }
-          </code>
+          <p>In the example below, only <code class="language-html">&lt;p&gt;</code> elements with <code class="language-html">class = "center"</code> will be center-aligned:</p>
+          
+          <!--Include-->    
+          <div data-include="css/class-selector-2"></div>
+
           <p>HTML elements can also refer to more than one class.</p>
-          <p>In the example below, the &lt;<span class="element">p</span>&gt; element will be styled according to <span class="attribute">class</span>="<span class="value">center</span>" and to <span class="attribute">class</span>="<span class="value">large</span>":</p>
-          <code>&lt;<span class="element">p</span> <span class="attribute">class</span>="<span class="value">center large</span>">This paragraph refers to two classes.&lt;/<span class="element">p</span>&gt;</code>
+          <p>In the example below, the <code class="language-html">&lt;p&gt;</code> element will be styled according to <code class="language-html">class = "center"</code> and to <code class="language-html">class = "large"</code>:</p>
+          
+          <!--Include-->    
+          <div data-include="css/class-selector-3"></div>
+          
         </section>
         <section class="sub-section">
           <header>grouping selectors</header>
           <p>If you have elements with the same style definitions, like this:</p>
-          <code>
-            <span class="selector">h1</span> {<br>
-            <span class="property">text-align</span>: <span class="value">center;</span><br>
-            <span class="property">color</span>: <span class="value">red;</span><br>
-            }<br><br>
-            
-            <span class="selector">h2</span> {<br>
-            <span class="property">text-align</span>: <span class="value">center;</span><br>
-            <span class="property">color</span>: <span class="value">red;</span><br>
-            }<br><br>
-            
-            <span class="selector">p</span> {<br>
-            <span class="property">text-align</span>: <span class="value">center;</span><br>
-            <span class="property">color</span>: <span class="value">red;</span><br>
-            }
-          </code>
+          
+          <!--Include-->    
+          <div data-include="css/grouping-selector"></div>
+
           <p>It will be better to group the selectors, to minimize the code.</p>
           <p>To group selectors, separate each selector with a comma.</p>
           <p>In the example below we have grouped the selectors from the code above:</p>
-          <code>
-            <span class="selector">h1</span>, <span class="selector">h2</span>, <span class="selector">p</span> {<br>
-            <span class="property">text-align</span>: <span class="value">center;</span><br>
-            <span class="property">color</span>: <span class="value">red;</span><br>
-            }
-          </code>
+          
+          <!--Include-->    
+          <div data-include="css/grouping-selector-2"></div>
+
         </section>
         <section class="sub-section">
           <header>comments</header>
           <p>Comments are used to explain the code, and may help when you edit the source code at a later date.</p>
           <p>Comments are ignored by browsers.</p>
-          <p>A CSS comment starts with /* and ends with */. Comments can also span multiple lines:</p>
-          <code>
-            <span class="selector">p</span> {<br>
-            <span class="property">color</span>: <span class="value">red;</span><br>
-            <span class="comment">/* This is a single-line comment */</span><br>
-            <span class="property">text-align</span>: <span class="value">center;</span><br>
-            }<br><br>
-            
-            <span class="comment">
-            /* This is<br>
-            a multi-line<br>
-            comment */<br>
-            </span>
-          </code>
+          <p>A CSS comment starts with <code class="language-css">/*</code> and ends with <code class="language-css">*/</code>. Comments can also span multiple lines:</p>
+          
+          <!--Include-->    
+          <div data-include="css/comments"></div>
+
         </section>
       </section>
       <section id="css-colors" class="main-section">
@@ -175,10 +145,10 @@
             <div id="bg-color-1" class="bg-color-child"><h1>Hello World<h1></div>
             <div id="bg-color-2" class="bg-color-child"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p></div>
           </div>
-          <code>
-              &lt;<span class="element">h1</span> <span class="attribute">style</span>=&quot;<span class="value">background-color:DodgerBlue;</span>&quot;&gt;Hello World&lt;/<span class="element">h1</span>&gt;<br>
-              &lt;<span class="element">p</span> <span class="attribute">style</span>=&quot;<span class="value">background-color:Tomato;</span>&quot;&gt;Lorem ipsum...&lt;/<span class="element">p</span>&gt; 
-          </code>
+          
+          <!--Include-->    
+          <div data-include="css/bg-color"></div>
+
         </section>
         <section class="sub-section">
           <header>Text Color</header>
@@ -186,11 +156,10 @@
           <h1 style="color:Tomato;">Hello World</h1>
           <p style="color:DodgerBlue;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
           <p style="color:MediumSeaGreen;">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-          <code>
-            &lt;<span class="element">h1</span> <span class="attribute">style</span>=&quot;<span class="value">color:Tomato;</span>&quot;&gt;Hello World&lt;/<span class="element">h1</span>&gt;<br>
-            &lt;<span class="element">p</span> <span class="attribute">style</span>=&quot;<span class="value">color:DodgerBlue;</span>&quot;&gt;Lorem ipsum...&lt;/<span class="element">p</span>&gt;<br>
-            &lt;<span class="element">p</span> <span class="attribute">style</span>=&quot;<span class="value">color:MediumSeaGreen;</span>&quot;&gt;Ut wisi enim...&lt;/<span class="element">p</span>&gt; 
-          </code>
+          
+          <!--Include-->    
+          <div data-include="css/text-color"></div>
+
         </section>
         <section class="sub-section">
           <header>Border Color</header>
@@ -198,11 +167,10 @@
           <h1 style="border:2px solid Tomato;">Hello World</h1>
           <h1 style="border:2px solid dodgerblue;">Hello World</h1>
           <h1 style="border:2px solid violet;">Hello World</h1>
-          <code>
-            &lt;<span class="element">h1</span> <span class="attribute">style</span>=&quot;<span class="value">border:2px solid Tomato;</span>&quot;&gt;Hello World&lt;/<span class="element">h1</span>&gt;<br>
-            &lt;<span class="element">h1</span> <span class="attribute">style</span>=&quot;<span class="value">border:2px solid DodgerBlue;</span>&quot;&gt;Hello World&lt;/<span class="element">h1</span>&gt;<br>
-            &lt;<span class="element">h1</span> <span class="attribute">style</span>=&quot;<span class="value">border:2px solid Violet;</span>&quot;&gt;Hello World&lt;/<span class="element">h1</span>&gt; 
-          </code>
+          
+          <!--Include-->    
+          <div data-include="css/border-color"></div>
+
         </section>
         <section class="sub-section">
           <header>Color Values</header>
@@ -215,16 +183,13 @@
           </div>
           <p>Same as color name "Tomato", but 50% transparent:</p>
           <div class="color-value-grid">
-              <div class="color-value-child-a">rgba(255, 99, 71, 0.5)</div>
-              <div class="color-value-child-a">hsla(9, 100%, 64%, 0.5)</div>
+            <div class="color-value-child-a">rgba(255, 99, 71, 0.5)</div>
+            <div class="color-value-child-a">hsla(9, 100%, 64%, 0.5)</div>
           </div>
-          <code>
-            &lt;h1 style=&quot;background-color:rgb(255, 99, 71);&quot;&gt;...&lt;/h1&gt;<br>
-            &lt;h1 style=&quot;background-color:#ff6347;&quot;&gt;...&lt;/h1&gt;<br>
-            &lt;h1 style=&quot;background-color:hsl(9, 100%, 64%);&quot;&gt;...&lt;/h1&gt;<br>            
-            &lt;h1 style=&quot;background-color:rgba(255, 99, 71, 0.5);&quot;&gt;...&lt;/h1&gt;<br>
-            &lt;h1 style=&quot;background-color:hsla(9, 100%, 64%, 0.5);&quot;&gt;...&lt;/h1&gt; 
-          </code>
+          
+          <!--Include-->    
+          <div data-include="css/color-values"></div>
+
         </section>
         <section class="sub-section">
           <header>RGB Value</header>
@@ -235,7 +200,8 @@
           <p>To display the color black, all color parameters must be set to 0, like this: rgb(0, 0, 0).</p>
           <p>To display the color white, all color parameters must be set to 255, like this: rgb(255, 255, 255). </p>
           <p>Experiment by mixing the RGB values below:</p>
-          <!---->
+
+          <!--RGB Example Toy-->
           <div id="rgb-grid">
             <div id="rgb-display">rgb(255, 255, 255)</div>   
             <div id="rgb-r">
@@ -255,31 +221,300 @@
             </div>
           </div>
 
+          <!--More RGB Examples-->
+          <h1>Colors Example</h1>
+          <div class="rgb-example-grid"> <!--Colors-->
+            <div class="rgb-example-child" style="background-color: rgb(255, 0, 0); color: white;">rgb(255, 0, 0)</div>
+            <div class="rgb-example-child" style="background-color: rgb(0, 0, 255); color: white;">rgb(0, 0, 255)</div>
+            <div class="rgb-example-child" style="background-color: rgb(60, 179, 113); color: white;">rgb(60, 179, 113)</div>
+            <div class="rgb-example-child" style="background-color: rgb(238, 130, 238); color: white;">rgb(238, 130, 238)</div>
+            <div class="rgb-example-child" style="background-color: rgb(255, 165, 0); color: white;">rgb(255, 165, 0)</div>
+            <div class="rgb-example-child" style="background-color: rgb(106, 90, 205); color: white;">rgb(106, 90, 205)</div>
+          </div>
+          <h1>Gray's Example</h1>
+          <p>Shades of gray are often defined using equal values for all the 3 light sources:</p>
+          <div class="rgb-example-grid"> <!--Gray's-->
+            <div class="rgb-example-child" style="background-color: rgb(0, 0, 0); color: white;">rgb(0, 0, 0)</div>
+            <div class="rgb-example-child" style="background-color: rgb(60, 60, 60); color: white;">rgb(60, 60, 60)</div>
+            <div class="rgb-example-child" style="background-color: rgb(120, 120, 120); color: white;">rgb(120, 120, 120)</div>
+            <div class="rgb-example-child" style="background-color: rgb(180, 180, 180); color: white;">rgb(180, 180, 180)</div>
+            <div class="rgb-example-child" style="background-color: rgb(240, 240, 240);">rgb(240, 240, 240)</div>
+            <div class="rgb-example-child" style="background-color: rgb(255, 255, 255);">rgb(255, 255, 255)</div>
+          </div>
+
+        </section>
+        <section class="sub-section">
+          <header>HEX Value</header>
+          <p>In HTML, a color can be specified using a hexadecimal value in the form:</p>
+          <h1>#rrggbb</h1>
+          <p>Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).</p>
+          <p>For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the others are set to the lowest value (00).</p>
+        
+          <!--Hex Examples-->
+          <h1>Colors Example</h1>
+          <div class="rgb-example-grid"> <!--Colors-->
+            <div class="rgb-example-child" style="background-color: #ff0000; color: white;">#ff0000</div>
+            <div class="rgb-example-child" style="background-color: #0000ff; color: white;">#0000ff</div>
+            <div class="rgb-example-child" style="background-color: #3cb371; color: white;">#3cb371</div>
+            <div class="rgb-example-child" style="background-color: #ee82ee; color: white;">#ee82ee</div>
+            <div class="rgb-example-child" style="background-color: #ffa500; color: white;">#ffa500</div>
+            <div class="rgb-example-child" style="background-color: #6a5acd; color: white;">#6a5acd</div>
+          </div>
+          <h1>Gray's Example</h1>
+          <p>Shades of gray are often defined using equal values for all the 3 light sources:</p>
+          <div class="rgb-example-grid"> <!--Gray's-->
+            <div class="rgb-example-child" style="background-color: #000000; color: white;">#000000</div>
+            <div class="rgb-example-child" style="background-color: #3c3c3c; color: white;">#3c3c3c</div>
+            <div class="rgb-example-child" style="background-color: #787878; color: white;">#787878</div>
+            <div class="rgb-example-child" style="background-color: #b4b4b4; color: white;">#b4b4b4</div>
+            <div class="rgb-example-child" style="background-color: #f0f0f0;">#f0f0f0</div>
+            <div class="rgb-example-child" style="background-color: #ffffff;">#ffffff</div>
+          </div>
         </section>
       </section>
       <section id="css-backgrounds" class="main-section">
         <header>Backgrounds</header>
+        <div style="background-image: url('https://www.w3schools.com/css/mountain.jpg'); padding: 10px; margin-top: 15px;">
+          <p>The CSS background properties are used to define the background effects for elements.</p>
+          <p>CSS background properties:</p>
+          <ul>
+            <li><code class="language-css">background-color</code></li>
+            <li><code class="language-css">background-image</code></li>
+            <li><code class="language-css">background-repeat</code></li>
+            <li><code class="language-css">background-attachment</code></li>
+            <li><code class="language-css">background-position</code></li>
+          </ul>
+        </div>
+        <section class="sub-section">
+          <header>Background Color</header>
+          <p>The <code class="language-css">background-color</code> property specifies the background color of an element.</p>
+          <p>The background color of a page is set like this:</p>
+          
+          <!--Include-->    
+          <div data-include="css/bg-color-2"></div>
+
+          <p>With CSS, a color is most often specified by:</p>
+          <ul>
+            <li>a valid color name - like <code class="language-css">"red"</code></li>
+            <li>a HEX value - like <code class="language-css">"#ff0000"</code></li>
+            <li>an RGB value - like <code class="language-css">"rgb(255,0,0)"</code></li>
+          </ul>
+          <p>Look at <a href="https://www.w3schools.com/cssref/css_colors_legal.asp">CSS Color Values</a> for a complete list of possible color values.</p>
+          <p>In the example below, the <code class="language-html">&lt;h1&gt;</code>, <code class="language-html">&lt;p&gt;</code>, and <code class="language-html">&lt;div&gt;</code> elements have different background colors:</p>
+          
+          <!--Include-->    
+          <div data-include="css/bg-color-3"></div>
+
+        </section>
+        <section class="sub-section">
+          <header>Background Image</header>
+          <p>The <code class="language-css">background-image</code> property specifies an image to use as the background of an element.</p>
+          <p>By default, the image is repeated so it covers the entire element.</p>
+          <p>The background image for a page can be set like this:</p>
+          
+          <!--Include-->    
+          <div data-include="css/bg-image"></div>
+
+        </section>
+        <section class="sub-section">
+          <header>Background Image - Repeat Vertically or Horizontally</header>
+          <p>By default, the <code class="language-css">background-image</code> property repeats an image both horizontally and vertically.</p>
+          <p>Some images should be repeated only horizontally or vertically, or they will look strange</p>
+          <p>If the image is repeated only horizontally (<code class="language-css">background-repeat: repeat-x;</code>), the background will look better:</p>
+          
+          <!--Include-->    
+          <div data-include="css/bg-image-2"></div>
+
+        </section>
+        <section class="sub-section">
+          <header>Background Image - Set position and no-repeat</header>
+          <p>Showing the background image only once is also specified by the <code class="language-css">background-repeat</code> property:</p>
+          
+          <!--Include-->    
+          <div data-include="css/bg-image-3"></div>
+ 
+        </section>
+        <section class="sub-section">
+          <header>Background Image - Fixed position</header>
+          <p>To specify that the background image should be fixed (will not scroll with the rest of the page), use the <code class="language-css">background-attachment</code> property:</p>
+        
+          <!--Include-->
+          <div data-include="css/bg-fixed"></div>
+
+        </section>
+        <section class="sub-section">
+          <header>Background - shorthand</header>
+          <p>To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.</p>
+          <p>The shorthand property for background is <code class="language-css">background</code>:</p>
+
+          <!--Include-->
+          <div data-include="css/bg-shorthand"></div>
+
+          <p>When using the shorthand property the order of the property values is:</p>
+          <ul>
+            <li><code class="language-css">background-color</code></li>
+            <li><code class="language-css">background-image</code></li>
+            <li><code class="language-css">background-repeat</code></li>
+            <li><code class="language-css">background-attachment</code></li>
+            <li><code class="language-css">background-position</code></li>
+          </ul>
+        </section>
       </section>
       <section id="css-borders" class="main-section">
         <header>Borders</header>
+        <section class="sub-section">
+          <header>CSS Border Properties</header>
+          <p>The CSS <code class="language-css">border</code> properties allow you to specify the style, width, and color of an element's border.</p>
+          <p style="padding: 10px; border-style: solid; border-width: 1px;">I have borders on all sides.</p>
+          <p style="padding: 10px; border-bottom-style: solid; border-width: 1px; border-color: red;">I have a red bottom border.</p>
+          <p style="padding: 10px; border-style: solid; border-width: 1px; border-radius: 5px;">I have rounded borders.</p>
+          <p style="padding: 10px; border-left-style: solid; border-width: 10px; background-color: lightblue; border-color: dodgerblue;">I have a blue left border.</p>
+        </section>
+        <section class="sub-section">
+          <header>Border Style</header>
+          <p>The <code class="language-css">border-style</code> property specifies what kind of border to display.</p>
+          <p>The following values are allowed:</p>
+          <ul>
+            <li><code class="language-css">dotted</code> - Defines a dotted border</li>
+            <li><code class="language-css">dashed</code> - Defines a dashed border</li>
+            <li><code class="language-css">solid</code> - Defines a solid border</li>
+            <li><code class="language-css">double</code> - Defines a double border</li>
+            <li><code class="language-css">groove</code> - Defines a 3D grooved border. The effect depends on the border-color value</li>
+            <li><code class="language-css">ridge</code> - Defines a 3D ridged border. The effect depends on the border-color value</li>
+            <li><code class="language-css">inset</code> - Defines a 3D inset border. The effect depends on the border-color value</li>
+            <li><code class="language-css">outset</code> - Defines a 3D outset border. The effect depends on the border-color value</li>
+            <li><code class="language-css">none</code> - Defines no border</li>
+            <li><code class="language-css">hidden</code> - Defines a hidden border</li>
+          </ul>
+          <p>The <code class="language-css">border-style</code> property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+        
+          <!--Include-->
+          <div data-include="css/border-style"></div>
+
+          <p>Result:</p>
+          <p style="border-style: dotted; border-width: 3px;">A dotted border.</p>
+          <p style="border-style: dashed; border-width: 3px;">A dashed border.</p>
+          <p style="border-style: solid; border-width: 3px;">A solid border.</p>
+          <p style="border-style: double; border-width: 3px;">A double border.</p>
+          <p style="border-style: groove; border-width: 3px;">A groove border. The effect depends on the border-color value.</p>
+          <p style="border-style: ridge; border-width: 3px;">A ridge border. The effect depends on the border-color value.</p>
+          <p style="border-style: inset; border-width: 3px;">An inset border. The effect depends on the border-color value.</p>
+          <p style="border-style: outset; border-width: 3px;">An outset border. The effect depends on the border-color value.</p>
+          <p style="border-style: none; border-width: 3px;">No border.</p>
+          <p style="border-style: hidden; border-width: 3px;">A hidden border.</p>
+          <p style="border-left-style: double; border-top-style: dotted; border-right-style: dashed; border-bottom-style: solid; border-width: 3px;">A mixed border.</p>
+          <p style="border-left-style: solid; border-width: 3px; padding: 15px; background-color: lightyellow; border-color: yellow;"><strong>Note:</strong> None of the OTHER CSS border properties described below will have ANY effect unless the <code class="language-css">border-style</code> property is set!</p>
+        </section>
+        <section class="sub-section">
+          <header>Border Width</header>
+          <p>The <code class="language-css">border-width</code> property specifies the width of the four borders.</p>
+          <p>The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick.</p>
+          <p>The <code class="lanaguage-css">border-width</code> property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+          <p style="border-style: solid; border-width: 5px;">5px <code class="language-css">border-width</code></p>
+
+          <!--Include-->
+          <div data-include="css/border-width"></div>
+
+        </section>
+        <section class="sub-section">
+          <header>Border Color</header>
+        </section>
+        <section class="sub-section">
+          <header>Border - Individual Sides</header>
+        </section>
+        <section class="sub-section">
+          <header>Border - shorthand</header>
+        </section>
+        <section class="sub-section">
+          <header>Rounded Borders</header>
+        </section>
       </section>
       <section id="css-margins" class="main-section">
         <header>Margins</header>
+        <p style="margin: 70px; border-style: solid; border-color: green; border-width: 1px;">This element has a margin of 70px</p>
+        <section class="sub-section">
+          <header>CSS Margins</header>
+        </section>
+        <section class="sub-section">
+          <header>Margin - Individual Sides</header>
+        </section>
+        <section class="sub-section">
+          <header>Margin - shorthand</header>
+        </section>
+        <section class="sub-section">
+          <header>auto</header>
+        </section>
+        <section class="sub-section">
+          <header>inherit</header>
+        </section>
+        <section class="sub-section">
+          <header>Margin Collapse</header>
+        </section>
       </section>
       <section id="css-padding" class="main-section">
         <header>Padding</header>
+        <p style="padding: 70px; border-style: solid; border-color: green; border-width: 1px;">This element has a padding of 70px</p>
+        <section class="sub-section">
+          <header>CSS Padding</header>
+        </section>
+        <section class="sub-section">
+          <header>Padding - Individual Sides</header>
+        </section>
+        <section class="sub-section">
+          <header>PAdding - shorthand</header>
+        </section>
+        <section class="sub-section">
+          <header>Padding and Element Width</header>
+        </section>
       </section>
       <section id="css-heightwidth" class="main-section">
         <header>Height/Width</header>
+        <p>This element has a width of 100%</p>
+        <section class="sub-section">
+          <header>Setting height and width</header>
+        </section>
+        <section class="sub-section">
+          <header>Setting max-width</header>
+        </section>
       </section>
       <section id="css-boxmodel" class="main-section">
         <header>Box Model</header>
+        <section class="sub-section">
+          <header>The CSS Box Model</header>
+        </section>
+        <section class="sub-section">
+          <header>Width and Height of an Element</header>
+        </section>
       </section>
       <section id="css-outline" class="main-section">
         <header>Outline</header>
+        <p>This element has a black border and a green outline with a width of 10px</p>
+        <section class="sub-section">
+          <header>CSS Outline</header>
+        </section>
+        <section class="sub-section">
+          <header>Outline Style</header>
+        </section>
+        <section class="sub-section">
+          <header>Outline Color</header>
+        </section>
+        <section class="sub-section">
+          <header>Outline Width</header>
+        </section>
+        <section class="sub-section">
+          <header>Outline - shorthand</header>
+        </section>
+        <section class="sub-section">
+          <header>Outline Offset</header>
+        </section>
       </section>
       <section id="css-text" class="main-section">
         <header>Text</header>
+        <section class="sub-section">
+          <div>
+          <header>Text Formatting</header>
+          </div>
+        </section>
       </section>
       <section id="css-fonts" class="main-section">
         <header>Fonts</header>

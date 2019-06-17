@@ -1,0 +1,26 @@
+{
+	"Insert prism html code": {
+		"scope": "html",
+		"prefix": "prism-html",
+		"body": [
+			"<script src='js/prism.js';></script>",
+			"<pre class='language-html'><code>",
+			"",
+			"</code></pre>"
+		],
+		"description": "Inserts tags for prism highlighted html code"
+	},
+
+	"Insert prism css code": {
+		"scope": "html",
+		"prefix": "prism-css",
+		"body": [
+			"<script src='js/prism.js';></script>",
+			"<pre class='language-css'><code>",
+			"",
+			"</code></pre>"
+		],
+		"description": "Inserts tags for prism highlighted css code"
+	}
+}
+

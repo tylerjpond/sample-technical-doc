@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="styles/prism.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/js.js"></script>
     <meta name="viewport">
     <title>HTML Documentation</title>
   </head>
   <body>
+    <script src="js/prism.js"></script>
+
     <nav id="topnav">
       <a href="index.html" class="nav-link-top" id="active-link">HTML</a>
       <a href="css-doc.html" class="nav-link-top">CSS</a>
@@ -19,7 +24,7 @@
       <a href="#html_headings" class="nav-link">Headings</a>
       <a href="#html_paragraphs" class="nav-link">Paragraphs</a>
       <a href="#html_styles" class="nav-link">Styles</a>
-      <div id="sidenav-footer">Note that this site is just a sample and is not meant to be complete. Information here is referenced from <a href="https://www.w3schools.com">w3schools</a></div>
+      <footer>Note that this site is just a sample and is not meant to be complete. Information here is referenced from <a href="https://www.w3schools.com">w3schools</a></footer>
     </nav>
     <main id="content">
       <section id="introduction" class="main-section">
@@ -37,73 +42,57 @@
         </ul>
         <section class="sub-section">
           <header>Sample HTML Document</header>
-          <pre><code>&lt;<span class="element">!DOCTYPE</span> <span class="value">html</span>&gt;
-&lt;<span class="element">html</span>&gt;
-  &lt;<span class="element">head</span>&gt;
-    &lt;<span class="element">title</span>&gt;Page Title&lt;/<span class="element">title</span>&gt;
-  &lt;/<span class="element">head</span>&gt;
-  &lt;<span class="element">body</span>&gt;
-    &lt;<span class="element">h1</span>&gt;My First Heading&lt;/<span class="element">h1</span>&gt;
-    &lt;<span class="element">p</span>&gt;My first paragraph.&lt;/<span class="element">p</span>&gt;
-  &lt;/<span class="element">body</span>&gt;
-&lt;/<span class="element">html</span>&gt;</code></pre>
+          <div data-include="html/sample"></div>
         </section>
         <section class="sub-section">
           <header>Sample Explained</header>
           <ul>
-            <li>The &lt;<span class="element">!DOCTYPE html</span>&gt; declaration defines this document to be HTML5</li>
-            <li>The &lt;<span class="element">html</span>&gt; element is the root element of an HTML page</li>
-            <li>The &lt;<span class="element">head</span>&gt; element contains meta information about the document</li>
-            <li>The &lt;<span class="element">title</span>&gt; element specifies a title for the document</li>
-            <li>The &lt;<span class="element">body</span>&gt; element contains the visible page content</li>
-            <li>The &lt;<span class="element">h1</span>&gt; element defines a large heading</li>
-            <li>The &lt;<span class="element">p</span>&gt; element defines a paragraph</li>
+            <li>The <code class="language-html">&lt;!DOCTYPE html&gt;</code> declaration defines this document to be HTML5</li>
+            <li>The <code class="language-html">&lt;html&gt;</code> element is the root element of an HTML page</li>
+            <li>The <code class="language-html">&lt;head&gt;</code> element contains meta information about the document</li>
+            <li>The <code class="language-html">&lt;title&gt;</code> element specifies a title for the document</li>
+            <li>The <code class="language-html">&lt;body&gt;</code> element contains the visible page content</li>
+            <li>The <code class="language-html">&lt;h1&gt;</code> element defines a large heading</li>
+            <li>The <code class="language-html">&lt;p&gt;</code> element defines a paragraph</li>
           </ul>
         </section>
       </section>
       <section id="html_elements" class="main-section">
         <header>HTML Elements</header>
         <p>An HTML element usually consists of a start tag and end tag, with the content inserted in between:</p>
-        <p><span class="tag">&lt;</span><span class="element">tagname</span>&gt;Content goes in here!<span class="tag">&lt;/</span><span class="element">tagname</span>&gt;</p>
+        <pre class="language-html"><code>&lt;tagname&gt;Content goes in here!&lt;/tagname&gt;</code></pre>
         <section class="sub-section">
           <header>Nested Elements</header>
           <p>HTML elements can be nested (elements can contain elements).</p>
           <p>All HTML documents consist of nested HTML elements.</p>
           <p>This example contains four HTML elements:</p>
-          <pre><code>&lt;<span class="element">!DOCTYPE</span> <span class="value">html</span>&gt;
-&lt;<span class="element">html</span>&gt;
-  &lt;<span class="element">body</span>&gt;         
-    &lt;<span class="element">h1</span>&gt;My First Heading&lt;/<span class="element">h1</span>&gt;
-    &lt;<span class="element">p</span>&gt;My first paragraph.&lt;/<span class="element">p</span>&gt;        
-  &lt;/<span class="element">body</span>&gt;
-&lt;/<span class="element">html</span>&gt;</code></pre>
+          <div data-include="html/sample-nested"></div>
         </section>
         <section class="sub-section">
           <header>Sample Explained</header>
-          <p>The <html> element defines the whole document.</p>
+          <p>The <code class="language-html">&lt;html&gt;</code> element defines the whole document.</p>
           <p>It has a start tag <html> and an end tag </html>.</p>
           <p>The element content is another HTML element (the <body> element).</p>
-          <pre><code>&lt;<span class="element">html</span>&gt; 
-  &lt;<span class="element">body</span>&gt;          
-    &lt;<span class="element">h1</span>&gt;My First Heading&lt;/<span class="element">h1</span>&gt; 
-    &lt;<span class="element">p</span>&gt;My first paragraph.&lt;/<span class="element">p</span>&gt;     
-  &lt;/<span class="element">body</span>&gt; 
-&lt;/<span class="element">html</span>&gt; </code></pre>
-          <p>The &lt;<span class="element">body</span>&gt; element defines the document body.</p>
-          <p>It has a start tag &lt;<span class="element">body</span>&gt; and an end tag </body>.</p>
-          <p>The element content is two other HTML elements (&lt;h1&gt; and &lt;p&gt;).</p>
-          <pre><code>&lt;<span class="element">body</span>&gt; 
-  &lt;<span class="element">h1</span>&gt; My First Heading&lt;/<span class="element">h1</span>&gt; 
-  &lt;<span class="element">p</span>&gt; My first paragraph.&lt;/<span class="element">p</span>&gt; 
-&lt;/<span class="element">body</span>&gt;</code></pre>
-          <p>The &lt;h1&gt; element defines a heading.</p>
-          <p>It has a start tag &lt;<span class="element">h1</span>&gt;  and an end tag &lt;/<span class="element">h1</span>&gt;.</p>
+
+          <div data-include="html/nested-explained"></div>
+
+          <p>The <code class="language-html">&lt;body&gt;</code> element defines the document body.</p>
+          <p>It has a start tag <code class="language-html">&lt;body&gt;</code> and an end tag <code class="language-html">&lt;/body&gt;</code>.</p>
+          <p>The element content is two other HTML elements (<code class="language-html">&lt;h1&gt;</code> and <code class="language-html">&lt;p&gt;</code>).</p>
+
+          <div data-include="html/nested-explained-2"></div>
+
+          <p>The <code class="language-html">&lt;h1&gt;</code> element defines a heading.</p>
+          <p>It has a start tag <code class="language-html">&lt;h1&gt;</code>  and an end tag <code class="language-html">&lt;/h1&gt;</code>.</p>
           <p>The element content is: My First Heading.</p>
-          <pre><code>&lt;<span class="element">h1</span>&gt;My First Heading&lt;/<span class="element">h1</span>&gt; </code></pre>
-          <p>The &lt;<span class="element">p</span>&gt; element defines a paragraph.</p>
-          <p>It has a start tag &lt;<span class="element">p</span>&gt; and an end tag &lt;/<span class="element">p</span>&gt;.</p>
+
+          <div data-include="html/nested-explained-3"></div>
+
+          <p>The <code class="language-html">&lt;p&gt;</code> element defines a paragraph.</p>
+          <p>It has a start tag <code class="language-html">&lt;p&gt;</code> and an end tag <code class="language-html">&lt;/p&gt;</code>.</p>
           <p>The element content is: My first paragraph.</p>
-          <pre><code>&lt;<span class="element">p</span>&gt; My first paragraph.&lt;/<span class="element">p</span>&gt; </code></pre>
+
+          <div data-include="html/nested-explained-4"></div>
         </section>
       </section>
       <section id="html_attributes" class="main-section">
@@ -113,151 +102,156 @@
           <li>All HTML elements can have attributes</li>
           <li>Attributes provide additional information about an element</li>
           <li>Attributes are always specified in the start tag</li>
-          <li>Attributes usually come in name/value pairs like: <span class="element">name</span>="<span class="value">value</span>"</li>
+          <li>Attributes usually come in name/value pairs like: <code class="language-html">name = "value"</code></li>
         </ul>
         <section class="sub-section">
           <header>href</header>
-          <p>HTML links are defined with the <a> tag. The link address is specified in the href attribute:</p>
-            <code>&lt;<span class="element">a</span> <span class="attribute">href</span>="<span class="value">https://www.w3schools.com</span>"&gt;This is a link&lt;/<span class="element">a</span>&gt;</code>
+          <p>HTML links are defined with the <code class="language-html">&lt;a&gt;</code> tag. The link address is specified in the <code class="language-html">href</code> attribute:</p>
+          
+          <pre class="language-html"><code>&lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;</code></pre>
         </section>
         <section class="sub-section">
           <header>src</header>
-          <p>HTML images are defined with the &lt;<span class="element">img</span>&gt; tag.</p>
-          <p>The filename of the image source is specified in the src attribute:</p>
-          <code>&lt;<span class="element">img</span> <span class="attribute">src</span>="<span class="value">img_girl.jpg</span>"&gt;</code>
+          <p>HTML images are defined with the <code class="language-html">&lt;img&gt;</code> tag.</p>
+          <p>The filename of the image source is specified in the <code class="language-html">src</code> attribute:</p>
+
+          <pre class="language-html"><code>&lt;img src="img_girl.jpg"&gt;</code></pre>
         </section>
         <section class="sub-section">
           <header>width and height</header>
           <p>Images in HTML have a set of size attributes, which specifies the width and height of the image:</p>
-          <code>&lt;<span class="element">img </span><span class="attribute">src</span>="<span class="value">img_girl.jpg</span>" <span class="attribute">width</span>="<span class="value">500</span>" <span class="attribute">height</span>="<span class="value">600</span>"&gt;</code>
-          <p>The image size is specified in pixels: <span class="attribute">width</span>=<span class="value">"500"</span> means <b>500 pixels</b> wide.</p>
+
+          <pre class="language-html"><code>&lt;img src="img_girl.jpg" width="500" height="600"&gt;</code></pre>
+          
+          <p>The image size is specified in pixels: <code class="language-html">width = "500"</code> means <strong>500 pixels</strong> wide.</p>
         </section>
         <section class="sub-section">
           <header>alt</header>
           <p>The alt attribute specifies an alternative text to be used, when an image cannot be displayed.</p>
           <p>The value of the attribute can be read by screen readers. This way, someone "listening" to the webpage, e.g. a vision impaired person, can "hear" the element.</p>
-          <code>&lt;<span class="element">img</span> <span class="attribute">src</span>="<span class="value">img_girl.jpg</span>" <span class="attribute">alt</span>="<span class="value">Girl with a jacket</span>"&gt;</code>
+
+          <pre class="language-html"><code>&lt;img src</span>="img_girl.jpg" alt="Girl with a jacket"&gt;</code></pre>
         </section>
         <section class="sub-section">
           <header>style</header>
           <p>The style attribute is used to specify the styling of an element, like color, font, size etc.</p>
-          <code>&lt;<span class="element">p</span> <span class="attribute">style</span>="<span class="value">color:red</span>"&gt;I am a paragraph&lt;/<span class="element">p</span>&gt;</code>
+
+          <pre class="language-html"><code>&lt;p style="color:red"&gt;I am a paragraph&lt;/p&gt;</code></pre>
         </section>
         <section class="sub-section">
           <header>lang</header>
-          <p>The language of the document can be declared in the <html> tag.</p>
-          <p>The language is declared with the lang attribute.</p>
+          <p>The language of the document can be declared in the <code class="language-html">&lt;html&gt;</code> tag.</p>
+          <p>The language is declared with the <code class="language-html">lang</code> attribute.</p>
           <p>Declaring a language is important for accessibility applications (screen readers) and search engines:</p>
-          <code>&lt;<span class="element">!DOCTYPE</span> <span class="value">html</span>&gt;<br>&lt;<span class="element">html</span> <span class="attribute">lang</span>="<span class="value">en-US</span>"&gt;<br>&lt;<span class="element">body</span>&gt;<br><br>...<br><br>&lt;/<span class="element">body</span>&gt;<br>&lt;/<span class="element">html</span>&gt;</code>
+
+          <div data-include="html/sample-lang"></div>
         </section>
         <section class="sub-section">
           <header>title</header>
-          <p>Here, a title attribute is added to the &lt;<span class="element">p</span>&gt; element. The value of the title attribute will be displayed as a tooltip when you mouse over the paragraph:</p>
-          <code>&lt;<span class="element">p</span> <span class="attribute">title</span>="<span class="value">I'm a tooltip</span>"&gt;This is a paragraph.&lt;/<span class="element">p</span>&gt;</code>
+          <p>Here, a title attribute is added to the <code class="language-html">&lt;p&gt;</code> element. The value of the title attribute will be displayed as a tooltip when you mouse over the paragraph:</p>
+
+          <pre class="language-html"><code title="I'm a tooltip">&lt;p title="I'm a tooltip"&gt;This is a paragraph.&lt;/p&gt;</code></pre>
         </section>
       </section>
       <section id="html_headings" class="main-section">
         <header>HTML Headings</header>
         <p>Headings are defined with the &lt;<span class="element">h1</span>&gt; to &lt;<span class="element">h6</span>&gt; tags.</p>
-        <p>&lt;<span class="element">h1</span>&gt; defines the most important heading. &lt;<span class="element">h6</span>&gt; defines the least important heading.</p>
-        <code>&lt;<span class="element">h1</span>&gt;Heading 1&lt;/<span class="element">h1</span>&gt;<br>&lt;<span class="element">h2</span>&gt;Heading 2&lt;/<span class="element">h2</span>&gt;<br>&lt;<span class="element">h3</span>&gt;Heading 3&lt;/<span class="element">h3</span>&gt;<br>&lt;<span class="element">h4</span>&gt;Heading 4&lt;/<span class="element">h4</span>&gt;<br>&lt;<span class="element">h5</span>&gt;Heading 5&lt;/<span class="element">h5</span>&gt;<br>&lt;<span class="element">h6</span>&gt;Heading 6&lt;/<span class="element">h6</span>&gt;</code>
+        <p><code class="language-html">&lt;h1&gt;</code> defines the most important heading. <code class="language-html">&lt;h6&gt;</code> defines the least important heading.</p>
+
+        <div data-include="html/intro-headings"></div>
+
         <section class="sub-section">
           <header>Importance of Headings</header>
           <p>Search engines use the headings to index the structure and content of your web pages.</p>
           <p>Users skim your pages by its headings. It is important to use headings to show the document structure.</p>
-          <p>&lt;<span class="element">h1</span>&gt; headings should be used for main headings, followed by &lt;<span class="element">h2</span>&gt; headings, then the less important &lt;<span class="element">h3</span>&gt;, and so on.</p>
+
+          <p><code class="language-html">&lt;h1&gt;</code>headings should be used for main headings, followed by <code class="language-html">&lt;h2&gt;</code> headings, then the less important <code class="language-html">&lt;h3&gt;</code>, and so on.</p>
         </section>
         <section class="sub-section">
           <header>Bigger Headings</header>
           <p>Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS font-size property:</p>
-          <code>&lt;<span class="element">h1</span> <span class="attribute">style</span>="<span class="value">font-size:60px;</span>"&gt;Heading 1&lt;/<span class="element">h1</span>&gt;</code>
+
+          <pre class="language-html"><code>&lt;h1 style="font-size:60px;"&gt;Heading 1&lt;/h1&gt;</code></pre>
         </section>
         <section class="sub-section">
           <header>Horizontal Rules</header>
-          <p>The &lt;<span class="element">hr</span>&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
-          <p>The &lt;<span class="element">hr</span>&gt; element is used to separate content (or define a change) in an HTML page:</p>
-          <code>&lt;<span class="element">h1</span>&gt;This is heading 1&lt;/<span class="element">h1</span>&gt;<br>&lt;<span class="element">p</span>&gt;This is some text.&lt;/<span class="element">p</span>&gt;<br>&lt;<span class="element">hr</span>&gt;<br>&lt;<span class="element">h2</span>&gt;This is heading 2&lt;/<span class="element">h2</span>&gt;<br>&lt;<span class="element">p</span>&gt;This is some other text.&lt;/<span class="element">p</span>&gt;<br>&lt;<span class="element">hr</span>&gt;</code>
+          <p>The <code class="language-html">&lt;hr&gt;</code> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
+          <p>The <code class="language-html">&lt;hr&gt;</code> element is used to separate content (or define a change) in an HTML page:</p>
+
+          <div data-include="html/sample-hr"></div>
         </section>
       </section>
       <section id="html_paragraphs" class="main-section">
         <header>Paragraphs</header>
-        <p>The HTML &lt;<span class="element">p</span>&gt; element defines a paragraph:</p>
-        <code>&lt;<span class="element">p</span>&gt;This is a paragraph.&lt;/<span class="element">p</span>&gt;<br>&lt;<span class="element">p</span>&gt;This is another paragraph.&lt;/<span class="element">p</span>&gt;</code>
+        <p>The HTML <code class="language-html">&lt;p&gt;</code> element defines a paragraph:</p>
+
+        <pre class="language-html"><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre>
+
         <section class="sub-section">
           <header>Display</header>
           <p>You cannot be sure how HTML will be displayed.</p>
           <p>Large or small screens, and resized windows will create different results.</p>
           <p>With HTML, you cannot change the output by adding extra spaces or extra lines in your HTML code.</p>
           <p>The browser will remove any extra spaces and extra lines when the page is displayed:</p>
-          <pre><code>&lt;<span class="element">p</span>&gt;
-This paragraph
-contains a lot of lines
-in the source code,
-but the browser 
-ignores it.
-&lt;/<span class="element">p</span>&gt;
 
-&lt;<span class="element">p</span>&gt;
-This paragraph
-contains         a lot of spaces
-in the source         code,
-but the        browser 
-ignores it.
-&lt;/<span class="element">p</span>&gt;</code></pre>
+          <div data-include="html/paragraph-display"></div>
         </section>
         <section class="sub-section">
           <header>Line Breaks</header>
-          <p>The HTML &lt;<span class="element">br</span>&gt; element defines a line break.</p>
-          <p>Use &lt;<span class="element">br</span>&gt; if you want a line break (a new line) without starting a new paragraph:</p>
-          <code>&lt;<span class="element">p</span>&gt;This is&lt;br&gt;a paragraph&lt;br&gt;with line breaks.&lt;/<span class="element">p</span>&gt;</code>
-          <p>The &lt;<span class="element">br</span>&gt; tag is an empty tag, which means that it has no end tag.</p>
+          <p>The HTML <code class="language-html">&lt;br&gt;</code> element defines a line break.</p>
+          <p>Use <code class="language-html">&lt;br&gt;</code> if you want a line break (a new line) without starting a new paragraph:</p>
+
+          <pre class="language-html"><code>&lt;p&gt;This is&lt;br&gt;a paragraph&lt;br&gt;with line breaks.&lt;/p&gt;</code></pre>
+
+          <p>The <code class="language-html">&lt;br&gt;</code> tag is an empty tag, which means that it has no end tag.</p>
         </section>
         <section class="sub-section">
-          <header>&lt;pre&gt;</header>
-          <p>The HTML &lt;<span class="element">pre</span>&gt; element defines preformatted text.</p>
-          <p>The text inside a &lt;<span class="element">pre</span>&gt; element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:</p>
-          <code>&lt;<span class="element">pre</span>&gt;<br>
-              My Bonnie lies over the ocean.<br><br>
-            
-              My Bonnie lies over the sea.<br><br>
-            
-              My Bonnie lies over the ocean.<br><br>
-            
-              Oh, bring back my Bonnie to me.<br>
-            &lt;/<span class="element">pre</span>&gt;</code>
+          <header><code class="language-html">&lt;pre&gt;</code></header>
+          <p>The HTML <code class="language-html">&lt;pre&gt;</code> element defines preformatted text.</p>
+          <p>The text inside a <code class="language-html">&lt;pre&gt;</code> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:</p>
+          
+          <div data-include="html/sample-pre"></div>
         </section>
       </section>
       <section id="html_styles" class="main-section">
         <header>Styles</header>
         <p>Setting the style of an HTML element, can be done with the style attribute.</p>
         <p>The HTML style attribute has the following syntax:</p>
-        <code>&lt;<span class="element">tagname</span> <span class="attribute">style</span>=&quot;<span class="value">property:value;</span>&quot;&gt;</code>
-        <p>The <b>property</b> is a CSS property. The <b>value</b> is a CSS value.</p>
+
+        <pre class="language-html"><code>&lt;tagname style=&quot;property:value;&quot;&gt;</code></pre>
+
+        <p>The <strong>property</strong> is a CSS property. The <strong>value</strong> is a CSS value.</p>
         <section class="sub-section">
           <header>Background Color</header>
           <p>The <span class="attribute">background-color</span> property defines the background color for an HTML element.</p>
           <p>This example sets the background color for a page to powderblue:</p>
-          <code>&lt;<span class="element">body</span> <span class="attribute">style</span>=&quot;<span class="value">background-color:powderblue;</span>&quot;&gt;<br><br>&lt;<span class="element">h1</span>&gt;This is a heading&lt;/<span class="element">h1</span>&gt;<br>&lt;<span class="element">p</span>&gt;This is a paragraph.&lt;/<span class="element">p</span>&gt;<br><br>&lt;/<span class="element">body</span>&gt;</code>
+
+          <div data-include="html/bg-color"></div>
         </section>
         <section class="sub-section">
           <header>Text Color</header>
           <p>The <span class="attribute">color</span> property defines the text color for an HTML element:</p>
-          <code>&lt;<span class="element">h1</span> <span class="attribute">style</span>=&quot;<span class="value">color:blue;</span>&quot;&gt;This is a heading&lt;/<span class="element">h1</span>&gt;<br>&lt;<span class="element">p</span> <span class="attribute">style</span>=&quot;<span class="value">color:red;</span>&quot;&gt;This is a paragraph.&lt;/<span class="element">p</span>&gt;</code>
+
+          <div data-include="html/text-color"></div>
         </section>
         <section class="sub-section">
           <header>Fonts</header>
           <p>The <span class="attribute">font-family</span> property defines the font to be used for an HTML element:</p>
-          <code>&lt;<span class="element">h1</span> <span class="attribute">style</span>=&quot;<span class="value">font-family:verdana;</span>&quot;&gt;This is a heading&lt;/<span class="element">h1</span>&gt;<br>&lt;<span class="element">p </span><span class="attribute">style</span>=&quot;<span class="value">font-family:courier;</span>&quot;&gt;This is a paragraph.&lt;/<span class="element">p</span>&gt;</code>
+
+          <div data-include="html/fonts"></div>
         </section>
         <section class="sub-section">
           <header>Text Size</header>
           <p>The <span class="attribute">font-size</span> property defines the text size for an HTML element:</p>
-          <code>&lt;<span class="element">h1</span> <span class="attribute">style</span>=&quot;<span class="value">font-size:300%;</span>&quot;&gt;This is a heading&lt;/<span class="element">h1</span>&gt;<br>&lt;<span class="element">p</span> <span class="attribute">style</span>=&quot;<span class="value">font-size:160%;</span>&quot;&gt;This is a paragraph.&lt;/<span class="element">p</span>&gt;</code>
+
+          <div data-include="html/text-size"></div>
         </section>
         <section class="sub-section">
           <header>Text Alignment</header>
           <p>The <span class="attribute">text-align</span> property defines the horizontal text alignment for an HTML element:</p>
-          <code>&lt;<span class="element">h1</span> <span class="attribute">style</span>=&quot;<span class="value">text-align:center;</span>&quot;&gt;Centered Heading&lt;/<span class="element">h1</span>&gt;<br>&lt;<span class="element">p</span> <span class="attribute">style</span>=&quot;<span class="value">text-align:center;</span>&quot;&gt;Centered paragraph.&lt;/<span class="element">p</span>&gt;</code>
+
+          <div data-include="html/text-align"></div>
         </section>
       </section>
     </main>  

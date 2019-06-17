@@ -21,6 +21,7 @@ $(document).ready(function(){
   $("#b").val("0");
   updateExampleRGB();
 
+  includeContent();
 });
 
 // For RGB Value CSS example
@@ -47,3 +48,10 @@ function updateExampleRGB() {
   $("#rgb-b div").html(b);
 }
 
+function includeContent() {
+  var includes = $('[data-include]');
+  $.each(includes, function(){
+    var file = 'includes/' + $(this).data('include') + '.html';
+    $(this).load(file);
+  });
+}
